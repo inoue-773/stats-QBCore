@@ -1,18 +1,14 @@
 ---------------
 -- Variables --
 ---------------
-PRPCore = nil
+QBCore = nil
 
 -------------------
--- PRP Core Stuff --
+-- QB Core Stuff --
 -------------------
-Citizen.CreateThread(function()
-	while PRPCore == nil do
-		TriggerEvent('PRPCore:GetObject', function(obj) PRPCore = obj end)
-		Citizen.Wait(0)
-	end
+RegisterNetEvent('QBCore:Client:UpdateObject', function()
+	QBCore = exports['qb-core']:GetCoreObject()
 end)
-
 
 
 ---------------
