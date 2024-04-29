@@ -1,5 +1,8 @@
-PRPCore = nil
-TriggerEvent('PRPCore:GetObject', function(obj) PRPCore = obj end)
+QBCore = nil
+RegisterNetEvent('QBCore:Server:UpdateObject', function()
+	if source ~= '' then return false end
+	QBCore = exports['qb-core']:GetCoreObject()
+end)
 
 local totalplayers = 0
 local playerdatatable ={}
